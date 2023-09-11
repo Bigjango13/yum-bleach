@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
-  "version": "${version}",
+  "id": "yumbleach",
+  "version": "1.0.0",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Yum Bleach",
+  "description": "This mod aims to help you be able to drink bleach.",
   "authors": [
-    "Turnip Labs"
+    "Useless"
   ],
   "contact": {
-    "homepage": "",
+    "homepage": "https://github.com/UselessBullets/yum-bleach",
     "sources": ""
   },
 
@@ -18,15 +18,17 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+        "useless.yumbleach.YumBleach"
     ]
   },
   "mixins": [
-      "examplemod.mixins.json"
+    "yumbleach.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.3"
+    "fabricloader": ">=0.13.3",
+    "nonamedyes": ">=0.1.0",
+    "halplibe": ">=2.1.1"
   },
   "suggests": {
   }
