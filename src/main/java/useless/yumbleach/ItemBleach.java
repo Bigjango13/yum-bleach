@@ -8,12 +8,13 @@ import net.minecraft.core.world.World;
 
 public class ItemBleach extends ItemFood {
     public ItemBleach(String name, int id, int hurtamount) {
-        super(name, id, hurtamount, false);
+        super(name, id, hurtamount, 7, false, 8);
     }
+
     @Override
-    public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer) {
+    public ItemStack onUseItem(ItemStack itemstack, World world, EntityPlayer entityplayer) {
         if (itemstack.consumeItem(entityplayer)) {
-            entityplayer.hurt(entityplayer, this.healAmount, DamageType.GENERIC);
+            entityplayer.hurt(entityplayer, this.getHealAmount(), DamageType.GENERIC);
         }
         return itemstack;
     }
